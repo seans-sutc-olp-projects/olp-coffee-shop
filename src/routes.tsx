@@ -7,8 +7,12 @@ const routeArr: RouteDefinition[] = [
         component: lazy(() => import("./pages/")),
     },
     {
-        path: "/order",
+        path: "/order/:staff",
         component: lazy(() => import("./pages/order")),
+    },
+    {
+        path: "/checkout/:staff/:products/:price",
+        component: lazy(() => import("./pages/checkout")),
     }
 ]
 export const Routes = useRoutes(routeArr);
